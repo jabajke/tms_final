@@ -14,12 +14,16 @@
 <body>
     <aside>
         <img src="{% static 'main/img/ljagushonok-pepe.png' %}" alt="Лого">
-        <span class = "logo">Жабка</span>
-        <h3>Навигация</h3>
+        <span class = "logo"></span>
+        {% load i18n %}
+        <h3>Навигация по сайту</h3>
         <ul>
             <a href="{% url 'home' %}"><li><i class="fas fa-home"></i>Главная</li></a>
             <a href="{% url 'about' %}"><li><i class="fas fa-file-signature"></i>Про нас</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fas fa-file-signature"></i>Новости на сайте</li></a>
             <a href=""><li><i class="fas fa-address-book"></i>Контакты</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fa fa-plus-circle"></i>Добавить запись</button></li></a>
+
         </ul>
     </aside>
     <main>
