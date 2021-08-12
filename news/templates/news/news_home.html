@@ -9,8 +9,8 @@
             {% for el in news %}
                 <div class="alert alert-warning">
                     <h3>{{ el.title }}</h3>
-                    <h4> {{ el.anons }}</h4>
-                    <p>{{ el.full_text }}</p>
+                    <p> {{ el.anons }}</p>
+                    <a href="{% url 'detail_news' el.id %}" class="btn btn-warning">Читать далее</a>
                 </div>
             {% endfor %}
         {% else %}

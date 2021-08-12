@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
+from django.contrib.auth import authenticate, login
 
 
 def index(request):
@@ -14,3 +15,6 @@ def about(request):
 
 def create(request):
     return render(request, 'news/create.html')
+
+
+
